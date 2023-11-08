@@ -1,0 +1,12 @@
+{
+  "name": "aws-saml-containers",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "web-ext build --overwrite-dest",
+    "sign": "web-ext sign"
+  },
+  "devDependencies": {
+    "web-ext": "^7.8.0"
+  }
+}

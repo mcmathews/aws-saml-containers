@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "AWS SAML Containers",
+  "version": "1.0",
+  "description": "Automatically places AWS SAML logins into per-role containers.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "cookies",
+    "contextualIdentities",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "https://signin.aws.amazon.com/saml"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://signin.aws.amazon.com/saml"
+      ],
+      "js": [
+        "samlLogin.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}
