@@ -13,6 +13,11 @@
     "webRequestBlocking",
     "https://signin.aws.amazon.com/saml"
   ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{2e261043-15a4-4a26-9032-45df887855d6}"
+    }
+  },
   "content_scripts": [
     {
       "matches": [
