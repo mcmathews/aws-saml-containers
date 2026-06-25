@@ -15,7 +15,10 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "aws-saml-containers@mcmathews"
+      "id": "aws-saml-containers@mcmathews",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
   "content_scripts": [
