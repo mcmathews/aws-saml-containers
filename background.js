@@ -50,14 +50,10 @@ async function handleSamlLogin(formData, originalTabId) {
     const container = await prepareContainer(`${accountName}/${roleName}`);
     const originalTab = await browser.tabs.get(originalTabId);
     globalFormDataHolder = formData;
-    const newTab = await browser.tabs.create({
+    await browser.tabs.create({
         cookieStoreId: container.cookieStoreId,
         index: originalTab.index,
         url: "/openInContainer.html",
-    });
-    browser.tabs.executeScript(newTab.id, {
-        file: "/openInContainer.js",
-        runAt: "document_start",
     });
     browser.tabs.remove(originalTabId);
 }
